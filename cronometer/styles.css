@@ -1,0 +1,325 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Hammersmith One", sans-serif;
+  text-transform: uppercase;
+}
+body {
+  overflow: hidden;
+  transition: 0.7s;
+}
+.button {
+  text-decoration: none;
+}
+.inactive {
+visibility: hidden;  
+}
+
+.headline {
+  margin-top: 72px;
+}
+.title {
+  text-decoration: underline 3px;
+  text-align: center;
+  font-size: 29.2px;
+  font-weight: 100;
+  letter-spacing: 5px;
+}
+.type-of-timer {
+  text-align: center;
+  color: #fa9f63;
+  font-size: 23px;
+  font-weight: 100;
+  letter-spacing: 5px;
+}
+.cronometer {
+  text-align: center;
+}
+.crono-bg {
+  position: absolute;
+  right: calc(-15% + 14px);
+  top: 61%;
+  width: 500px;
+}
+
+.buttons {
+  visibility: hidden;
+}
+
+.active {
+  visibility: visible;
+}
+.start-button {
+  margin-top: 100px;
+  border-radius: 50px;
+  padding: 20px;
+  font-size: 24px;
+  width: 150px;
+  background-color: #fa9f63;
+  color: #fff;
+  border: none;
+  transition: 0.4s;
+  position: absolute;
+  left: 44%;
+}
+#icons {
+  height: auto; /* Ajuste automático da altura */
+  display: flex;
+  flex-direction: column; /* Alinha os ícones em coluna */
+  align-items: left; /* Centraliza os ícones horizontalmente */
+  position: absolute;
+  border: none;
+  transition: 0.3s ease-in-out;
+  max-width: 40px; /* Define um tamanho máximo para as imagens */
+  flex-grow: 0; /* Impede que as imagens cresçam desproporcionalmente */
+  margin-top: 30px;
+  margin-left: 5px; /* Espaçamento entre os ícones */
+}
+
+
+#icons:hover {
+  transition: 0.3s ease-in-out;
+}
+.pomodore {
+  width: 45px;
+}
+.cron,
+.timer {
+  max-width: 40px;
+}
+
+.menu {
+  cursor: pointer;
+
+}
+#icons {
+  height: auto; /* Ajuste automático da altura */
+  display: flex;
+  flex-direction: column; /* Alinha os ícones em coluna */
+  align-items: left; /* Centraliza os ícones horizontalmente */
+  position: absolute;
+  border: none;
+  transition: 0.3s ease-in-out;
+}
+
+#icons {
+  max-width: 40px; /* Define um tamanho máximo para as imagens */
+  flex-grow: 0; /* Impede que as imagens cresçam desproporcionalmente */
+  margin-top: 30px;
+  margin-left: 5px; /* Espaçamento entre os ícones */
+}
+#icons button {
+  border: none;
+  background: none;
+}
+
+#icons:hover {
+  transition: 0.3s ease-in-out;
+}
+.pomodore {
+  width: 45px;
+}
+.cron,
+.timer {
+  max-width: 40px;
+  cursor: pointer;
+}
+
+/* Aumenta a área de colisão do aside */
+aside {
+  position: absolute;
+  transition: all 0.3s ease-in-out;
+  height: 100vh;
+  width: 100px;
+  left: 5px;
+  top: 28%;
+}
+
+
+#icons {
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  position: absolute;
+  left: 0; /* Alinha os ícones à esquerda */
+  border: none;
+  transition: 0.3s ease-in-out;
+  width: 100%; /* Faz os ícones ocuparem toda a largura do aside */
+}
+
+#icons:hover,
+aside:hover {
+  transition: 0.3s ease-in-out;
+  width: 200px;
+}
+
+/* Ajuste para a seta */
+.arrow {
+  width: 0;
+  height: 0;
+  border-top: 20px solid transparent;
+  border-bottom: 20px solid transparent;
+  border-right: 20px solid #fa9f63;
+  position: absolute;
+  left: 80px; /* Ajusta a posição conforme necessário */
+  top: 95px;
+  transition: all 0.3s ease-in-out;
+}
+
+aside:hover .arrow {
+  transform: translateX(30px) rotate(180deg); /* Mantém a seta na posição expandida */
+  transition: all 0.3s ease-in-out;
+  left: 160px;
+}
+
+
+label {
+  opacity: 0%;
+  transition: 0.3s;
+  position: relative;
+  bottom: 35px;
+  margin-left: 40px;
+  color: black;
+  opacity: 0;
+  transition: 0.3s;
+  position: relative;
+  left: 10px;
+  text-decoration: none;
+  cursor: pointer;
+}
+label::after {
+  content: "";
+  width: 0%;
+  height: 3px;
+  background-color: #fa9f63;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: 0.5s ease-in-out;
+}
+
+aside:hover label,
+.button:hover label {
+  opacity: 100%;
+  transition: 0.3s;
+}
+
+.button:hover label::after {
+  width: 100%;
+}
+
+.button {
+  background: none;
+  border: none;
+  text-align: left;
+  padding-left: 10px;
+  width: 100%;
+  transition: 0.3s ease-in-out;
+}
+
+.button img {
+  margin-right: 10px;
+}
+
+
+.reset-button,
+.pause-button {
+  border-radius: 50px;
+  padding: 20px;
+  font-size: 24px;
+  width: 150px;
+  border: none;
+  transition: 0.4s;
+  border: solid 4px #fa9f63;
+  margin: 100px 8%;
+}
+
+.button-animation {
+  opacity: 0%;
+  transition: 0.5s;
+}
+
+.pause-button {
+  background-color: #fa9f63;
+  color: #fff;
+}
+.reset-button {
+  background: none;
+  color: #fa9f63;
+}
+
+.pause-button:hover {
+  background: none;
+  color: #fa9f63;
+}
+.reset-button:hover {
+  background-color: #fa9f63;
+  color: #fff;
+}
+.button-light-mode:active {
+  background-color: #c46145;
+}
+.cronometer {
+  margin-top: 200px;
+}
+.cronometer-numbers {
+  font-size: 65.2px;
+  font-weight: 300;
+  letter-spacing: 5px;
+}
+.two-points {
+  color: #fa9f63;
+}
+.button-light-mode {
+  position: absolute;
+  top: 94%;
+  margin: 0 0 19px 19px;
+  font-size: 18px;
+  background-color: #ffad5b;
+  color: #fff;
+  border-radius: 8px;
+  height: 40px;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  transition: 0.7s;
+}
+
+.dark-mode {
+  background-color: #181a1b;
+  color: white;
+}
+
+.dark-mode-pause-button {
+  background-color: #656565;
+  color: white;
+  border: solid 4px #656565;
+}
+.dark-mode-reset-button {
+  border: solid 4px #656565;
+  color: #656565;
+}
+.dark-mode-pause-button:hover {
+  border: solid 4px #656565;
+  color: #656565;
+}
+.dark-mode-reset-button:hover {
+  background-color: #656565;
+  color: white;
+}
+.dark-mode-buttons {
+  background-color: #656565;
+}
+
+.dark-mode-two-points {
+  color: #656565;
+}
+.dark-mode-headline {
+  color: #c2c2c2;
+}
+
+.start-button:active {
+  opacity: 0.8;
+}

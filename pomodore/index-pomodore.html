@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles-pomodore.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap"
+      rel="stylesheet"
+    />
+    <title>Cronos - Pomodoro</title>
+  </head>
+  <body>
+    <div class="headline">
+      <h3 class="title">cronos</h3>
+      <p class="type-of-timer">pomodoro</p>
+    </div>
+
+    <aside>
+      <menu>
+        <div id="icons">
+          <a class="button" href="../cronometer/index.html">
+            <img src="../img/cronometer-icon.png" alt="" class="cron" href="../cronometer/index.html"/>
+            <label>cronômetro</label>
+          </a>
+          <a class="button" href="../timer/index-timer.html">
+            <img src="../img/timer-icon.png" alt="" class="timer" href="../timer/index-timer.html"/>
+            <label>temporizador</label>
+          </a>
+          <a class="button">
+            <img src="../img/pomodore-icon-1.png" alt="" class="pomodore"/>
+            <label>pomodoro</label>
+          </a>
+        </div>
+      </menu>
+      <div class="arrow"></div>
+    </aside>
+    
+    <main>
+      <div class="orange-losangle"></div>
+      <div class="buttons-box">
+        <button class="start-n-stop-button start">iniciar</button>
+        <button class="pause-button"></button>
+      </div>
+      <h4 class="time">25<span class="double-dots">:</span>00</h4>
+
+      <audio id="start-pomodore-sound" src="../aud/start-pomodore.wav" preload="auto"></audio>
+      <audio id="break-time-pomodore-sound" src="../aud/break-time-pomodore.mp3" preload="auto"></audio>
+      <audio id="work-time-pomodore-sound" src="../aud/work-time-pomodore.wav" preload="auto"></audio>
+
+    </main>
+
+    <script>
+
+      const lozangle = document.querySelector(".orange-losangle");
+      const startNStopButton = document.querySelector(".start-n-stop-button");
+      const time = document.querySelector(".time");
+      const startSound = document.querySelector("#start-pomodore-sound")
+      const breakSound = document.querySelector("#break-time-pomodore-sound")
+      function startInfiniteSpinAnimation() {
+        lozangle.classList.add("running");
+      }
+
+
+      function startAnimation() {
+        lozangle.classList.add("anim-1");
+        startNStopButton.classList.remove("start");
+        startNStopButton.classList.add("stop");
+        time.classList.add("anim-time-1");
+        time.classList.remove("paused-time")
+        time.classList.add("time-running");
+        startInfiniteSpinAnimation();
+        playSounds()
+
+      }
+
+function playSounds() {
+  if (isRunning) {
+          lozangle.classList.remove("anim-1");
+          time.classList.remove("time-running");
+          time.classList.remove("anim-time-1");
+          lozangle.classList.remove("running");
+          time.classList.add("paused-time")
+        }
+        if (!startedPomodore) {
+        }
+
+} 
+      startNStopButton.addEventListener("click", startAnimation);
+    </script>
+    <script src="pomodore-script.js">
+      
+    </script>
+  </body>
+</html>

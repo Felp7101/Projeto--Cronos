@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap"
+      rel="stylesheet"
+    />
+    <title>Cronos - cronometro</title>
+  </head>
+  <body>
+    <div class="cronometer-box">
+      <img
+        class="crono-bg"
+        src="../img/cronometer_bg_light.png"
+        alt="cronometer-background-icon"
+      />
+      <main class="container">
+        <div class="headline">
+          <h3 class="title">cronos</h3>
+          <p class="type-of-timer">cronômetro</p>
+        </div>
+
+        <aside>
+          <menu>
+            <div id="icons">
+              <a class="button">
+                <img src="../img/cronometer-icon.png" alt="icone de cronometro" class="cron" />
+                <label>cronômetro</label>
+              </a>
+              <a class="button" href="../timer/index-timer.html">
+                <img src="../img/timer-icon.png" alt="icone de temporizador" class="timer" href="../timer/index-timer.html"/>
+                <label>temporizador</label>
+              </a>
+              <a class="button" href="../pomodore/index-pomodore.html">
+                <img src="../img/pomodore-icon-1.png" alt="icone de pomodoro" class="pomodore" href="../pomodore/index-pomodore.html"/>
+                <label>pomodoro</label>
+              </a>
+            </div>
+          </menu>
+          <div class="arrow"></div>
+        </aside>
+        <div class="cronometer">
+          <h2 class="cronometer-numbers">
+            00<span class="two-points">:</span>00<span class="two-points">:</span
+            >00
+          </h2>
+          <div class="buttons">
+            <button class="start-button active">iniciar</button>
+            <button class="pause-button hidden">pausar</button>
+            <button class="reset-button hidden">reiniciar</button>
+          </div>
+        </div>
+     
+      </main>
+    </div>
+    <script src="script-cronometer.js"></script>
+   
+  </body>
+</html>

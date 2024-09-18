@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles-timer.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Hammersmith+One&display=swap"
+      rel="stylesheet"
+    />
+    <title>Cronos - temporizador</title>
+  </head>
+  <body>
+    <main class="container">
+      <div class="headline">
+        <h3 class="title">cronos</h3>
+        <p class="type-of-timer">temporizador</p>
+      </div>
+      <aside>
+        <menu>
+          <div id="icons">
+            <a class="button" href="../cronometer/index.html">
+              <img src="../img/cronometer-icon.png" alt="" class="cron" />
+              <label>cronômetro</label>
+            </a>
+            <a class="button">
+              <img src="../img/timer-icon.png" alt="" class="timer" />
+              <label>temporizador</label>
+            </a>
+            <a class="button" href="../pomodore/index-pomodore.html">
+              <img src="../img/pomodore-icon-1.png" alt="" class="pomodore" />
+              <label>pomodoro</label>
+            </a>
+          </div>
+        </menu>
+        <div class="arrow"></div>
+      </aside>git
+                <div class="orange-circle circle-ptr ">
+                <h4>Clique aqui</h4>
+
+                <p class="stop-sign">parar</p>
+                </div>
+<div class="button-box">
+  <button class="pause-n-reset pause reset">pausar</button>
+</div>
+    <div class="timer-menu">
+        <h3>defina o timer</h3>
+        <div class="timer">
+            <input class="select-timer-numbers" type="text" placeholder="00:00:00" min="0" id="input-timer">
+            
+    </div>
+    <button class="start-button" onclick="startTimer()">iniciar</button>
+    </div>
+    <audio id="timer-sound" src="../aud/timer-alarm.mp3" preload="auto" loop></audio>
+    </main>
+    <script src="timer-script.js"></script>
+  </body>
+</html>
