@@ -51,7 +51,7 @@ const startPomodore = () => {
     time.innerHTML = `${String(pomodoreMinutes).padStart(2, "0")}<span class="double-dots">:</span>${String(
       pomodoreSeconds
     ).padStart(2, "0")}`;
-  }, 1); // 1000ms = 1 segundo
+  }, 1000); // 1000ms = 1 segundo
 };
 
 // Função para iniciar o intervalo de descanso
@@ -81,7 +81,7 @@ const startBreak = () => {
 
     // Atualiza o display do tempo do intervalo
     time.innerHTML = `${String(breakMinutes).padStart(2, "0")}<span class="double-dots">:</span>${String(breakSeconds).padStart(2, "0")}`;
-  }, 1); // 1000ms = 1 segundo
+  }, 1000); // 1000ms = 1 segundo
 };
 
 // Função para resetar os valores do Pomodoro após o intervalo
@@ -136,7 +136,7 @@ const resumeTimer = () => {
         }
         // Atualiza o display do tempo de intervalo
         time.innerHTML = `${String(breakMinutes).padStart(2, "0")}<span class="double-dots">:</span>${String(breakSeconds).padStart(2, "0")}`;
-      }, 1);
+      }, 1000);
     } else {
       // Retoma o temporizador do Pomodoro
       pomodoreTimer = setInterval(() => {
@@ -158,7 +158,7 @@ const resumeTimer = () => {
         time.innerHTML = `${String(pomodoreMinutes).padStart(2, "0")}<span class="double-dots">:</span>${String(
           pomodoreSeconds
         ).padStart(2, "0")}`;
-      }, 1);
+      }, 1000);
     }
     isRunning = true;
     isPaused = false;

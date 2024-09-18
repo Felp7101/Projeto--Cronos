@@ -38,7 +38,7 @@ visibility: hidden;
 }
 .crono-bg {
   position: absolute;
-  right: calc(-15% + 14px);
+  right: calc(-17% + 14px);
   top: 61%;
   width: 500px;
 }
